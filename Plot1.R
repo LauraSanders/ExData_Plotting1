@@ -11,7 +11,8 @@ unzip("exdata_data_household_power_consumption.zip")
 alldata<-read.table("household_power_consumption.txt", header=TRUE, sep=";",stringsAsFactors=FALSE)
 twodayfebdata<-alldata[alldata$Date %in% c("1/2/2007","2/2/2007"),]
 
-##use the str() function to see if there are still values of ? present in the data.
+##use the str() function to take a look at the data. Because in the two requested dates no missing data is present (as shown by ?)
+## no action is undertaken to strip these from the data.
 str(twodayfebdata)
 
 ##make the Global_active_power variable numeric
